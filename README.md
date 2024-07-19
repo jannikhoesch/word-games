@@ -53,6 +53,8 @@ The selection of a random word (e.g. the secret word or the guess) is again done
 After receiving the guesses from the guesser, the keeper generates a feed- back. The used function compares the guess with the secret word and generates a string of digits, where ’2’ indicates a correctly placed letter, ’1’ indicates a correct letter in the wrong position, and ’0’ indicates a wrong letter.
 The guesser randomly selects the next guess from a list of valid words for each attempt, initially containing all words of the correct length. This list can then be refined based on the received feedback, excluding words that do not match the feedback pattern. This iterative filtering narrows down the possibilities, guiding the guesser toward the correct word efficiently.
 
+![image](https://github.com/user-attachments/assets/29c96519-99ca-45f3-ab83-cd0852c827bf)
+
 To assess the performance of my implementation of Wordle I measured the average guesses needed to guess the correct word and the average CPU time for each word length. The benchmark was run with 10000 iterations for each word length.
 
 ![wordle_avg-guesses](https://github.com/user-attachments/assets/15047106-95fd-4496-a107-003831595503)
