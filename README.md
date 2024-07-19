@@ -23,7 +23,7 @@ Ensure you have Python 3.7+ installed on your system.
     ```sh
     python play.py
 
-## Data Structures
+## Trie
 The Trie, a fundamental data structure in computer science, is essential to a wide range of applications, from autocomplete systems to spell checkers and beyond. At its core, a trie is a tree-like structure that efficiently stores a dynamic set of strings by using the common prefixes of the strings. This section explains the characteristics of the Trie data structure, highlighted by a discussion of my implementation of its key properties: nodes, insertion and search.
 
 ## Games
@@ -45,4 +45,24 @@ In addition, the computational complexity of finding all possible words also inc
 Overall, the results indicate that the computational load of the Word Challenges becomes sig- nificantly higher with longer words, suggesting the need for performance optimization for longer word lengths, which I have successfully implemented using a Trie structure.
 
 ### Wordle
+Wordle challenges players to guess a secret word through iterative guessing and strategic reasoning, guided by feedback provided for each guess. It can be interactively played in a guesser mode, where the player tries to find the secret word receiving feedback from the program and a keeper mode, where the player provides the feedback for the programs guesses. In automatic mode the program represents both the keeper and the guesser. This section outlines the strategies and data structures that support these core mechanics of the game.
+The selection of a random word (e.g. the secret word or the guess) is again done using the previously created words by length dictionary.
+After receiving the guesses from the guesser, the keeper generates a feed- back. The used function compares the guess with the secret word and generates a string of digits, where ’2’ indicates a correctly placed letter, ’1’ indicates a correct letter in the wrong position, and ’0’ indicates a wrong letter.
+The guesser randomly selects the next guess from a list of valid words for each attempt, initially containing all words of the correct length. This list can then be refined based on the received feedback, excluding words that do not match the feedback pattern. This iterative filtering narrows down the possibilities, guiding the guesser toward the correct word efficiently.
+
+To assess the performance of my implementation of Wordle I measured the average guesses needed to guess the correct word and the average CPU time for each word length. The benchmark was run with 10000 iterations for each word length.
+
+![wordle_avg-guesses](https://github.com/user-attachments/assets/15047106-95fd-4496-a107-003831595503)
+
+The first graph suggests a linear relationship between average guesses and word length: as word length increases, the average number of guesses required to solve the problem decreases. Several factors could cause this decrease, such as the ease of eliminating incorrect letters in longer words, or the shortage of longer words in the dictionary.
+
+![wordle_avg-times](https://github.com/user-attachments/assets/1fe6f6c5-bf77-42d9-8d8e-68f2aa14a6ac)
+
+At the same time, we observe an interesting pattern where CPU time peaks at a certain word length of 6 before decreasing, which suggests a point of maximal computational complexity relative to the length of the words being processed. 
+
+![n_words](https://github.com/user-attachments/assets/1b98b949-835f-4bfb-8a7a-738d8a5bbd07)
+
+Considering the distribution of the number of words for each word length, we notice that the CPU time seems to strongly correlate to the number of words. Less possible words in the dictionary, simplify the search and decision-making process of the algorithm.
+
+Overall, these trends in the Wordle game highlight a contrast to those observed in Word Chal- lenge, demonstrating how different algorithmic strategies can yield varied performance across word lengths. This analysis underscores the importance of tailored optimization strategies for each game to maintain consistant performance.
 
