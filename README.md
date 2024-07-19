@@ -24,7 +24,7 @@ Ensure you have Python 3.7+ installed on your system.
     python play.py
 
 ## Data Structures
-The Trie, a fundamental data structure in computer science, is essential to a wide range of appli- cations, from autocomplete systems to spell checkers and beyond. At its core, a trie is a tree-like structure that efficiently stores a dynamic set of strings by using the common prefixes of the strings. This section explains the characteristics of the Trie data structure, highlighted by a discussion of my implementation of its key properties: nodes, insertion and search.
+The Trie, a fundamental data structure in computer science, is essential to a wide range of applications, from autocomplete systems to spell checkers and beyond. At its core, a trie is a tree-like structure that efficiently stores a dynamic set of strings by using the common prefixes of the strings. This section explains the characteristics of the Trie data structure, highlighted by a discussion of my implementation of its key properties: nodes, insertion and search.
 
 ## Games
 ### Word Challenge
