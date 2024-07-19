@@ -14,7 +14,6 @@ In addition, the report presents a performance analysis of the two games, focusi
 - `wordle.py`: Script for the Wordle game logic
 - `requirements.txt`: List of Python package dependencies
 - `README.md`: This file
-- `Hoesch_Jannik-4-wordgames.pdf`: Project report
 
 ### How to Run
 Ensure you have Python 3.7+ installed on your system.
