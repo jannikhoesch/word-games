@@ -26,6 +26,9 @@ Ensure you have Python 3.7+ installed on your system.
 ## Trie
 The Trie, a fundamental data structure in computer science, is essential to a wide range of applications, from autocomplete systems to spell checkers and beyond. At its core, a trie is a tree-like structure that efficiently stores a dynamic set of strings by using the common prefixes of the strings. This section explains the characteristics of the Trie data structure, highlighted by a discussion of my implementation of its key properties: nodes, insertion and search.
 
+![image](https://github.com/user-attachments/assets/1c6d4a29-b1b9-4f63-8e4c-38b478a6dff7)
+
+
 ## Games
 ### Word Challenge
 Word Challenge is a game that challenges players to generate all possible words from a given set of letters, while adhering to a dictionary of valid words.
