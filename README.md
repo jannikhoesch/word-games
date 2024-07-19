@@ -28,6 +28,16 @@ The Trie, a fundamental data structure in computer science, is essential to a wi
 
 ![image](https://github.com/user-attachments/assets/1c6d4a29-b1b9-4f63-8e4c-38b478a6dff7)
 
+### TrieNode
+The TrieNode class serves as the foundational element of the Trie. Each node contains 'children' (A dictionary that maps characters to their subsequent TrieNodes) and 'is_end_of_word' (A boolean flag that marks the completion of a valid word). This structure enables the Trie to represent each letter of a string with a node in the tree, where paths from the root to a marked end node spell out the strings stored in the Trie.
+
+### Insert Function
+The insert method integrates a new word into the Trie with the following steps: Initialization (Begin at the root node), Traversal and Expansion (If no child node exists for the character, a new TrieNode is created) and Mark Completion (Upon reaching the end of the word, set the is end of word flag of the final node to True, signifying the presence of a complete word within the Trie). By inserting each word from the dictionary file into the Trie, we can build a comprehensive Trie representing all possible words with very efficient access for the word games. Additionally, I create the dictionary words by length, that maps the length of words to lists containing all words of that specific length. This improves the selection process for game mechanisms that require a word of a certain length.
+
+### Search Function
+The search method locates a word in the Trie with the following steps: Initialization (Begin at the root node), Traversal (For each character in the target word, the search moves to the corresponding child node), Check Existence (If at any point the required child node does not exist, the word is not in the Trie, and the search returns False) and Word Completion (Successfully reaching the end of the word with is end of word flagged as True confirms the word’s presence in the Trie)
+
+
 
 ## Games
 ### Word Challenge
